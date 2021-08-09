@@ -1,13 +1,12 @@
-import React, {Dispatch} from "react"
-import { useEffect, useState } from "react"
+import React from "react"
 
 export interface SearchPanelProps {
-    param: {
-        name: string,
-        personId: string
-    },
-    setParam: (param: SearchPanelProps['param']) => void,
-    users: {name: string}[]
+  param: {
+    name: string,
+    personId: string
+  },
+  setParam: (param: SearchPanelProps['param']) => void,
+  users: { name: string, id: number }[]
 }
 
 export const SearchPanel: React.FC<SearchPanelProps> = ({ param, setParam, users }) => {
@@ -22,10 +21,9 @@ export const SearchPanel: React.FC<SearchPanelProps> = ({ param, setParam, users
         personId: evt.target.value
       })}>
         <option value={''}>负责人</option>
-        <option value={'高修文'}>高修文</option>
         {
           users.map((item, index) => (
-            <option value={item.name} key={'user' + index}>{item.name}</option>
+            <option value={item.id} key={'user' + index}>{item.name}</option>
           ))
         }
       </select>
