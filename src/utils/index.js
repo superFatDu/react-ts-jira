@@ -16,7 +16,7 @@ export const useMount = (cb) => {
     }, [])
 }
 
-const isFalsy = value => value === 0 ? false : !value
+const isFalsy = (value) => value === 0 ? false : !value
 export const cleanObj = (obj) => {
     const res = { ...obj }
     Object.keys(res).forEach(key => {
