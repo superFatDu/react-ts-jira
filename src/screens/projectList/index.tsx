@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import qs from 'qs'
 import { List } from "./list"
 import { SearchPanel } from "./SearchPanel"
-import { useMount, useDebounce, cleanObj } from "../../utils";
+import { useMount, useDebounce, cleanObj } from "../../utils/index";
 
 export const ProjectList: React.FC = () => {
   const apiUrl = process.env.REACT_APP_API_URL

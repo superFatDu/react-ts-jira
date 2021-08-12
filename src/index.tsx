@@ -1,14 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import {ProjectList} from './screens/projectList/index'
+// import App from './App';
+// import {ProjectList} from './screens/projectList/index'
+import { HandleArray } from './screens/handleArray/index'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     {/*<App />*/}
-      <ProjectList />
+    {/* <ProjectList /> */}
+    <HandleArray />
   </React.StrictMode>,
   document.getElementById('root')
 );
